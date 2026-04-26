@@ -1,7 +1,7 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 import random
-
+import os
 
 def main_menu():
     return InlineKeyboardMarkup([
@@ -10,7 +10,7 @@ def main_menu():
     ])
 
 
-TOKEN = "8700188117:AAHme6Wm5xrosrU_TFQyBciI72V8HRgDpg0"
+TOKEN = os.getenv("TOKEN")
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
